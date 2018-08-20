@@ -41,10 +41,11 @@ task('wp-cleanup', function () {
 
     $actions = [
         "/opt/cpanel/composer/bin/composer require elseif/id-kollen",
-        "vendor/bin/wp rewrite structure '/%postname%'",
-        "vendor/bin/wp rewrite flush",
+        "wp theme activate twentyseventeen",
+        "wp rewrite structure '/%postname%'",
+        "wp rewrite flush",
         "php -r \"opcache_reset();\"",
-        "vendor/bin/wp cache flush",
+        "wp cache flush",
     ];
 
     foreach ($actions as $action) {
