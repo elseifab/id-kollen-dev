@@ -8,10 +8,10 @@ Description: Placera shortcode [logga-in] i en text
 */
 
 add_shortcode('logga-in', function () {
-    $url = rest_url("elseifab/id-kollen/v1/auth");
+    $url = rest_url("elseifab/idkollen/v1/auth");
 
     $result = "<form action=\"{$url}\" method=\"post\">";
-    $result .= "<input type=\"text\" name=\"pnr\" placeholder=\"Personnummer\" />";
+    $result .= "<input type=\"text\" name=\"pno\" placeholder=\"Personnummer\" />";
     $result .= "<br/>";
     $result .= "<input type=\"submit\" value=\"Logga in\" />";
     $result .= "";

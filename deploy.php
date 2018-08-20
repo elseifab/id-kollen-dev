@@ -41,7 +41,6 @@ task('wp-cleanup', function () {
 
     $actions = [
         "/opt/cpanel/composer/bin/composer require elseif/id-kollen",
-        "wp theme activate twentyseventeen",
         "wp rewrite structure '/%postname%'",
         "wp rewrite flush",
         "php -r \"opcache_reset();\"",
