@@ -41,14 +41,8 @@ task('wp-cleanup', function () {
 
     $actions = [
         "/opt/cpanel/composer/bin/composer require elseif/id-kollen",
-        "vendor/bin/wp language core install sv_SE",
-        "vendor/bin/wp language core update",
-        "vendor/bin/wp language core activate sv_SE",
         "vendor/bin/wp rewrite structure '/%postname%'",
         "vendor/bin/wp rewrite flush",
-        "vendor/bin/wp option update timezone_string \"Europe/Stockholm\"",
-        "vendor/bin/wp option update date_format \"Y-m-d\"",
-        "vendor/bin/wp option update time_format \"H:i\"",
         "php -r \"opcache_reset();\"",
         "vendor/bin/wp cache flush",
     ];
