@@ -18,16 +18,24 @@
     "vlucas/phpdotenv": "*",
     "johnpbloch/wordpress": "*",
     "oscarotero/env": "*",
-    "roots/wp-password-bcrypt": "*"
+    "roots/wp-password-bcrypt": "*",
+    "wp-cli/wp-cli": "*"
   },
   "require-dev": {
+    "deployer/deployer": "*",
     "squizlabs/php_codesniffer": "*"
   },
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+      "web/app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
+      ],
+      "web/app/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "web/app/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
     },
     "wordpress-install-dir": "web/wp"
   },
